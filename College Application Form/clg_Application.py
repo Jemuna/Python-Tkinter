@@ -48,27 +48,21 @@ root = tk.Tk()
 root.geometry("1500x800")
 root.title("College Application Form")
 
-# Create a Canvas widget
 canvas = tk.Canvas(root)
 canvas.pack(side="left", fill="both", expand=True)
 
-# Create a Scrollbar and link it to the canvas
 scrollbar = tk.Scrollbar(root, orient="vertical", command=canvas.yview)
 scrollbar.pack(side="right", fill="y")
 
 canvas.configure(yscrollcommand=scrollbar.set)
 
-# Create a frame inside the canvas
 scrollable_frame = tk.Frame(canvas)
 canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
 
-# Configure the scrollable frame to update its scroll region when widgets are added
 def on_frame_configure(event):
     canvas.configure(scrollregion=canvas.bbox("all"))
 
 scrollable_frame.bind("<Configure>", on_frame_configure)
-
-# Create the form inputs
 label = tk.Label(scrollable_frame, text="Student Details", font=('Arial', 18))
 label.grid(row=0, column=0, padx=10, pady=10, columnspan=2)
 
@@ -140,7 +134,6 @@ arts_course.grid(row=13, column=1, padx=10, pady=10, sticky="w")
 engineering_course = tk.Radiobutton(scrollable_frame, text="Engineering", variable=course_var, value="Engineering", font=('Arial', 14), state="disabled", command=display_course_details)
 engineering_course.grid(row=13, column=2, padx=10, pady=10, sticky="w")
 
-# Right side of the window
 result_label = tk.Label(root, font=('Arial', 14), justify="left", width=40, anchor="w")
 result_label.pack(side="right", padx=10, pady=10)
 
