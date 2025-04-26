@@ -1,4 +1,4 @@
-#College Application Form using Tkinter
+#COLLEGE Application Form using Tkinter
 
 ##Project Overview
 
