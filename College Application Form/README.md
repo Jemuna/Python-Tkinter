@@ -1,33 +1,25 @@
-#COLLEGE Application Form using Tkinter
+🎓 College Application Form
+A simple Tkinter-based desktop application that allows students to submit their application form with personal details, academic marks, and select a suitable course based on their percentage.
 
-##Project Overview
+📜 Features
+Student Personal Details Collection (Name, DOB, Address, etc.)
 
-This project is a simple College Application Form GUI built using Python's Tkinter library.
-It allows students to enter their personal and academic details, and based on their percentage, it enables them to choose an eligible course (Arts or Engineering).
+Academic Details Collection (10th Marks, 12th Marks, Percentage)
 
-##Features
+Dynamic Course Selection:
 
-•	Input fields for:
-o	Student Name
-o	Date of Birth
-o	Father's Name
-o	Address
-o	Phone Number
-o	Gender
-o	Year of Passout
-o	Nationality
-o	10th and 12th Marks
-o	Overall Percentage
-•	Validation of inputs to ensure all fields are filled and marks are numeric.
-•	Dynamic enabling/disabling of course selection:
-o	If the percentage is greater than 50%, both Arts and Engineering options are enabled.
-o	If less than or equal to 50%, only Arts is enabled.
-•	Display of selected course details.
-•	Scrollable form using a Canvas and Scrollbar.
-•	Display of submitted information and selected course details on the right side.
+If Percentage > 50% ➔ Arts and Engineering options enabled.
 
-##Requirements
+If Percentage ≤ 50% ➔ Only Arts option enabled.
 
-•	Python 3.x
-•	Tkinter (comes pre-installed with Python)
+Display of detailed Course Information on selection.
+
+Input validation with error messages.
+
+Scrollable form for better user experience.
+
+🛠️ Tech Stack
+Python
+
+Tkinter (for GUI development)
 
